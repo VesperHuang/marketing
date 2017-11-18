@@ -1,0 +1,50 @@
+@charset "utf-8";
+pre{white-space: normal;}
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,form,p,div{margin:0px auto;padding:0px; background:#f4f4f4}
+body{font-size:12px;font-family:"宋体";color: #555;line-height:23px;}
+img{border:0; vertical-align:middle;}
+div{ margin: 0px auto; padding: 0px;}
+ul,li{list-style:none;list-style-type: none}
+h1, h2, h3, h4, h5, h6 { font-size: 100% } /* 字体加粗与否，视页面标题更改 */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{ font-weight:bold;} /* 字体加粗与否，视页面标题更改 */
+i,b{ font-size:12px; font-weight:normal;font-style: normal;}
+input,button, textarea, select{ vertical-align: middle;}
+input{ height:23px; color:#000000; line-height:18px;}
+select{ height:23px; color:#000000; line-height:23px;}
+button { cursor: pointer }
+table{border-collapse:collapse;}
+em, cite { font-style: normal; }
+div{ margin:0px auto; padding:0px;}
+a{color:#555;text-decoration:none;}
+a:hover{color: #0371bc;text-decoration: none; list-style:none;}
+.txtlf{ text-align:left;}
+.txtrg{ text-align:right;}
+.fl{ float:left;}
+.fr{ float:right;}
+.fix:after {content:'.'; display:block;clear:both;visibility:hidden;height:0px;}/*清除浮动的一种方法，将此class名写在内部有浮动的标签中，便可清除子字元素的浮动，使用非常方便*/
+.fix {zoom:1;}
+.clearfixed:after { content: "."; clear: both; display: block; height: 0; overflow: hidden }
+.clearfixed { zoom: 1 } /* 增加清除浮动样式时，要注意当前元素是否为块结构，如果不是，要添加属性 display: block */
+.clear { display: block!important; float: none!important; clear: both; width: auto!important; height: 0;margin: 0 auto!important; padding: 0!important; font-size: 0; line-height: 0 }
+.brank{ line-height:8px; clear:both; height:8px;margin: 0 auto!important; padding: 0!important; font-size: 0; float: none!important;}
+.none{ display:none;} 
+
+
+
+.wap{ width:100%;}
+.header{ background:#f4f4f4; border-bottom:1px solid #dbdbdb; height:47px; line-height:47px; font-size:25px; text-align:center;}
+.listview{width:96%; margin-top:7px; border:1px solid #e3e3e3; border-radius:3px;}
+
+.listview li{border-bottom:1px solid #e3e3e3; height:40px; line-height:40px; background:#fcfcfc; padding:0px 6px; font-size:14px;}
+.listview li:last-child{ border-bottom:none;}
+.listview li span{text-align:right; width:75px; display:inline-block; background:#FFF; margin-right:2px;}
+.listview li .inputs{ width:71%; height:28px; line-height:28px; padding:0px 4px; border:none;}
+.listview li .tabGender{ text-align:center; width:73%; background:#FFF;}
+.listview li .tabGender a{color:#FFF;}
+.listview li .tabGender_left{background:#10c4b2; display:inline-block; height:26px; line-height:26px;border-top-left-radius:3px;border-bottom-left-radius:3px; padding:0px 10px; color:#FFF; border:1px solid #0eb09f;}
+.listview li .tabGender_right{background:#e2e2e2; display:inline-block; height:26px; line-height:26px; padding:0px 10px; color:#4c5356 !important; border:1px solid #cbcbcb; border-left:none;border-top-right-radius:3px;border-bottom-right-radius:3px;}
+.listview li .inputs30{ width:30%; height:24px; line-height:24px; padding:0px 3px; border:1px solid #dadada;}
+.listview li .yzm_but{ height:26px; line-height:26px; border:1px solid #f1f1f1; background:#e3e3e3; border-radius:3px; font-size:13px; padding:7px 9px;color:#4c5356; margin-left:10px;}
+
+.tj_but a{border:1px solid #c7c7c7; color:#4c5356; background:#dcdcdc; border-radius:3px; padding:2px 14px; margin:12px 2px; display:inline-block; font-size:13px;}
+.tj_but a:hover{ color:#4c5356;}

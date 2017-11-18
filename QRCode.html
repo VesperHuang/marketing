@@ -1,0 +1,74 @@
+﻿<div data-role="view" 
+	data-title="QRCode" 
+	data-layout="mk-main-layout" 
+	id="mk-qrcode-view">
+	
+	  <script src="../include/js/kendo/kendo.web.min.js"></script>    
+	  <script src="../include/js/kendo/kendo.dataviz.min.js"></script>
+		<link href="../include/styles/kendo/kendo.default.min.css" rel="stylesheet">
+    <link href="../include/styles/kendo/kendo.dataviz.min.css" rel="stylesheet">
+	  
+	  <div id="example" class="k-content">
+
+      	<div class="configuration-horizontal">
+					<div class="config-section">
+						<span class="configHead">请选择学校：</span>
+      			<input id="cmbBranchs" placeholder="请选择学校..." />	
+      		</div>	
+      	</div>
+
+        <div class="configuration-horizontal">
+            <div class="config-section">
+                <span class="configHead">QR code</span>
+                <span data-role="qrcode"
+                      data-error-correction="M"
+                      data-bind="value: qrcode"
+                      style="width: 180px"></span>
+            </div>
+        </div>	  	
+        <div class="configuration-horizontal">
+            <div class="config-section">
+                <span class="configHead">URL</span>
+                <input id="qrcode-url" data-bind="value: qrcode" data-value-update="keyup" style="width: 400px" readonly>
+            </div>
+        </div>
+	  </div>
+	 
+    <script type="text/javascript">
+    	
+        function createQrCode() {
+            var viewModel = kendo.observable({
+                qrcode: "http://180.166.253.196:84/marketing/index.html?branch=01401"
+            });
+            kendo.bind($("#example"), viewModel);
+        }    	
+        $(document).ready(createQrCode).bind("kendo:skinChange", createQrCode);
+        	
+        $(document).ready(function () {
+  
+            $("#cmbBranchs").kendoComboBox({
+              dataTextField: "name",
+              dataValueField: "id",
+              dataSource: branchs,
+              select: onSelect,
+              filter: "contains",
+              suggest: true,
+              index: 0
+          });
+            
+          function onSelect(e) {
+              if ("kendoConsole" in window) {
+                  var dataItem = this.dataItem(e.item.index());
+                  
+                  var url = "http://180.166.253.196:84/marketing/index.html?branch=" + dataItem.id
+                  $("#qrcode-url").val(url);
+                  $("#qrcode-url").keyup();
+                  $("#branch_desc").val(dataItem.name);
+                  console.log("event :: select (" + dataItem.name + " : " + dataItem.id + ")" );
+              }
+          };             
+        });
+  
+    </script>  
+</div>              
+ 
